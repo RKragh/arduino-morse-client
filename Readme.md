@@ -21,7 +21,8 @@ To get started you need the following hardware:
 ``` - 2x Arduino MEGA 2560(Or something like it).
  - 2x Arduino Ethernet Shield 2
  - 1x Button
- - Wires```
+ - Wires
+```
 
 See the ClientHwSetup.jpg for how to connect peripherals for the client.
 See the ServerHwSetup.jpg for how to connect peripherals for the server.
