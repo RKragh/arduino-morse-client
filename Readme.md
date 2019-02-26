@@ -25,6 +25,7 @@ To get started you need the following hardware:
 ```
 
 See the ClientHwSetup.jpg for how to connect peripherals for the client.
+
 See the ServerHwSetup.jpg for how to connect peripherals for the server.
 
 ### Installing
@@ -36,5 +37,7 @@ Upload it to the Arduino after connecting the hardware as described in Prerequis
 For testing purposes you will find a setting that while true, it will output morse signal to terminal. Once you set it to false it will send it to the given IP-address.
 ```
 bool testEnvActive = true;
-IPAddress ip(192.168.1.1);
+IPAddress ipServer(192.168.1.1);
+IPAddress ipClient(192.168.1.10);
+
 ```
