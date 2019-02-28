@@ -1,13 +1,14 @@
 #include <Ethernet2.h>
 #include <SPI.h>
+#include <HttpClient.h>
 
 
 // Config Variables
 bool testEnvActive = true;
 
 // Network Variables
-IPAddress ipServer(192, 168, 1, 1);
-IPAddress ipClient(192, 168, 1, 10);
+IPAddress ipServer(192, 168, 0, 124);
+IPAddress ipClient(192, 168, 0, 227);
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 };
 EthernetClient client;
 
@@ -18,6 +19,7 @@ const int ledRed = 3;
 // Arrays to store morse messages in including array index
 char msgArray[255];
 char tempCharArray[128];
+String sMessage = "";
 String tempCapture;
 int currMorseArrIndex = 0;
 int currMsgArrayIndex = 0;
@@ -39,6 +41,7 @@ int buttonState = 0;
 int buttonLastState = 0;
 int msgInProgress = 0;
 
+// Used for morse converter
 #define SIZE 26
 String letters[SIZE]={
 
@@ -127,36 +130,62 @@ void loop() {
           
         }
   
-      }
-      else
+      } // If enough time has passed - start converting the morse signal to a CHAR
+      else if ((tempCapture != "") && ((timeLastInsert + timeMaxWaitBeforeConvert) < millis()))
       {
-        if ((tempCapture != "") && ((timeLastInsert + 1000) < millis()))
-        {
-          ConvertTempToMessage();
-        }
+        ConvertTempToMessage();
+      } // Send message
+      else if ((sMessage != "") && ((timeLastInsert + timeMaxWaitBeforeSend) < millis()))
+      {
+        SendMessage(sMessage);
       }
   
-  
+      // Reset state so we the loop can function properly
       timeFirstPress = 0;
       buttonLastState = 1;
     }
   
 }
 
+// Function that converts our morse code to a char and adds it to the message that will be sent
 void ConvertTempToMessage()
 {
-  msgArray[currMsgArrayIndex] = MorseToChar(tempCapture);
+  
+  sMessage += MorseToChar(tempCapture);
   tempCapture = "";
-  
-  Serial.println(msgArray[currMsgArrayIndex]);
-  currMsgArrayIndex++;
+  Serial.println("Captured morse converted to message");
 }
 
-void SendMessage()
+// Function to send the message. It connects to a web server and sends the content of the sMessage string.
+// Once sent, it turns the LED on so that the user can see that it's sent if not looking at the terminal.
+void SendMessage(String content)
 {
-  
+  Serial.print("About to send");
+  Serial.println();
+    if (client.connect(ipServer, 80)) {
+    Serial.print("connected to Server");
+    Serial.println("Sending following to server: " + content);
+    // Make a HTTP request:
+    client.println("POST / HTTP/1.1");
+    client.println("Host: 192.168.0.124:80");
+    client.println("Accept: */*");
+    client.println("Content-Length: " + content.length());
+    client.println("Content-Type: application/x-www-form-urlencoded");
+    client.println();
+    client.println(content);
+    client.stop();
+
+  } else {
+    // if you didn't get a connection to the server:
+    Serial.println("connection failed");
+  }
+  digitalWrite(ledRed, HIGH);
+  delay(1000);
+  digitalWrite(ledRed, LOW);
+  sMessage = "";
 }
 
+// The converter function used in ConvertTempToMessage
 char MorseToChar(String characterCode)
 {
   
