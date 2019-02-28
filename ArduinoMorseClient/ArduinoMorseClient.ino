@@ -1,50 +1,64 @@
+/**
+ * @file
+ * Sketch that use a button to send morse code
+ *
+ * @version 29th February 2019
+ * @author Rasmus Kragh and Philip Dein
+ */
+ 
 #include <Ethernet2.h>
 #include <SPI.h>
 #include <HttpClient.h>
 
-
-// Config Variables
-bool testEnvActive = true;
-
-// Network Variables
+/**
+ * Variables used for networking
+ */
 IPAddress ipServer(192, 168, 0, 124);
 IPAddress ipClient(192, 168, 0, 227);
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 };
 EthernetClient client;
 
-// Pin variables
+/**
+ * Peripheral mapping
+ */
 const int btnPin = 2;
 const int ledRed = 3;
 
-// Arrays to store morse messages in including array index
-char msgArray[255];
-char tempCharArray[128];
+/**
+ * Strings to hold morse code and chars
+ */
 String sMessage = "";
-String tempCapture;
-int currMorseArrIndex = 0;
-int currMsgArrayIndex = 0;
+String tempCapture = "";
 
-// Time control for morse functions
+/**
+ * Time functions used in void Loop() to keep track of button presses.
+ */
 long timeFirstPress = 0;
 long timeLastPress = 0;
 long timeLastInsert = 0;
 long timeDif = 0;
 
-// Constants for timings etc.
+/**
+ * Time constants used in button logic to find out if we do '.' or '-'
+ * Also used for setting time before converting morse to char and when to send
+ */
 const long timeMaxPush = 150;
 const long timeFailSafe = 20;
 const long timeMaxWaitBeforeConvert = 500;
 const long timeMaxWaitBeforeSend = 2000;
 
-// Capture button state to know when clicked and held
+/**
+ * Variables used to check button state
+ */
 int buttonState = 0;
 int buttonLastState = 0;
 int msgInProgress = 0;
 
-// Used for morse converter
+/**
+ * Used for the MorseConverter function
+ */
 #define SIZE 26
 String letters[SIZE]={
-
 // A to I
 ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
 // J to R 
@@ -55,7 +69,11 @@ String letters[SIZE]={
 int characterAscii = 0;
 
 
-
+/**
+ * Standard function that runs on startup. We initialize the Serial port to be able to see terminal
+ * We also start the Ethernet class so that we can communicate on the network
+ * We set button to register button releases. Set a timer on timeLastInsert, this is to prevent weird happenings.
+ */
 void setup() {
 
   //Start serial for debugging
@@ -108,7 +126,7 @@ void loop() {
           if (timeDif < timeMaxPush)
           {
             tempCapture += ".";
-            currMorseArrIndex++;
+            
             //Serial.println(".");
             msgInProgress = 1;
             
@@ -116,7 +134,7 @@ void loop() {
           else
           {
             tempCapture += "-";
-            currMorseArrIndex++;
+            
             //Serial.println("-");
             msgInProgress = 1;
           }
@@ -147,7 +165,11 @@ void loop() {
   
 }
 
-// Function that converts our morse code to a char and adds it to the message that will be sent
+/**
+ * Function that takes the current series of morse inputs and converts them to the char.
+ * It uses the array of strings initalized before void start().
+ * For debugging purposes it prints that it has finished converting.
+ */
 void ConvertTempToMessage()
 {
   
@@ -155,9 +177,12 @@ void ConvertTempToMessage()
   tempCapture = "";
   Serial.println("Captured morse converted to message");
 }
-
-// Function to send the message. It connects to a web server and sends the content of the sMessage string.
-// Once sent, it turns the LED on so that the user can see that it's sent if not looking at the terminal.
+/** 
+ * Function to send the message. It connects to a web server and sends the content of the sMessage string.
+ * Once sent, it turns the LED on so that the user can see that it's sent if not looking at the terminal. 
+ * 
+ * @param String content the content store in sMessage
+ */
 void SendMessage(String content)
 {
   Serial.print("About to send");
@@ -185,7 +210,11 @@ void SendMessage(String content)
   sMessage = "";
 }
 
-// The converter function used in ConvertTempToMessage
+/**
+ * The converter function used in ConvertTempToMessage
+ * 
+ * @param String characterCode The morse inputs. It will be found in the array and the index + characterAscii equals Capital letter.
+ */
 char MorseToChar(String characterCode)
 {
   

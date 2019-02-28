@@ -1,0 +1,39 @@
+This project will be a library for a Arduino Morse Client. It will be able to send a morse signal made from button presses through the T\+CP protocol, a server will afterwards be able to receive and display the signal. In the example we use an Arduino M\+E\+GA 2560 and an Arduino Ethernet Shield 2.
+
+\subsection*{Getting Started}
+
+Download this project, unpack the zip and load it up in the Arduino I\+DE of your choice.
+
+If you do not already have an Arduino I\+DE installed you can get the latest from the following website\+: \href{https://www.arduino.cc/en/Main/Software}{\texttt{ https\+://www.\+arduino.\+cc/en/\+Main/\+Software}}
+
+In this example we\textquotesingle{}re using Arduino v1.\+8.\+8.
+
+\subsubsection*{Prerequisites}
+
+To get started you need the following hardware\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{- 2x Arduino Ethernet Shield 2}
+\DoxyCodeLine{- 1x Button}
+\DoxyCodeLine{- Wires}
+\end{DoxyCode}
+
+
+See the Client\+Hw\+Setup.\+jpg for how to connect peripherals for the client.
+
+See the Server\+Hw\+Setup.\+jpg for how to connect peripherals for the server.
+
+\subsubsection*{Installing}
+
+Download the project and save it in a fitting location. Unpack the zip file and open the project through your Arduino I\+DE.
+
+Upload it to the Arduino after connecting the hardware as described in Prerequisites.
+
+For testing purposes you will find a setting that while true, it will output morse signal to terminal. Once you set it to false it will send it to the given I\+P-\/address. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bool testEnvActive = true;}
+\DoxyCodeLine{IPAddress ipServer(192.168.1.1);}
+\DoxyCodeLine{IPAddress ipClient(192.168.1.10);}
+\end{DoxyCode}
+ 
