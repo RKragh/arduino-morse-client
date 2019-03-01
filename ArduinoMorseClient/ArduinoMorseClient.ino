@@ -2,7 +2,7 @@
  * @file
  * Sketch that use a button to send morse code
  *
- * @version 29th February 2019
+ * @version 1st Of March 2019
  * @author Rasmus Kragh and Philip Dein
  */
  
@@ -10,54 +10,33 @@
 #include <SPI.h>
 #include <HttpClient.h>
 
-/**
- * Variables used for networking
- */
-IPAddress ipServer(192, 168, 0, 124);
-IPAddress ipClient(192, 168, 0, 227);
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 };
-EthernetClient client;
-
-/**
- * Peripheral mapping
- */
-const int btnPin = 2;
-const int ledRed = 3;
-
-/**
- * Strings to hold morse code and chars
- */
-String sMessage = "";
-String tempCapture = "";
-
-/**
- * Time functions used in void Loop() to keep track of button presses.
- */
-long timeFirstPress = 0;
-long timeLastPress = 0;
-long timeLastInsert = 0;
-long timeDif = 0;
-
-/**
- * Time constants used in button logic to find out if we do '.' or '-'
- * Also used for setting time before converting morse to char and when to send
- */
-const long timeMaxPush = 150;
-const long timeFailSafe = 20;
-const long timeMaxWaitBeforeConvert = 500;
-const long timeMaxWaitBeforeSend = 2000;
-
-/**
- * Variables used to check button state
- */
-int buttonState = 0;
-int buttonLastState = 0;
-int msgInProgress = 0;
-
-/**
- * Used for the MorseConverter function
- */
+/** \brief Size of morse array as well as for loop in MorseConverter function*/
 #define SIZE 26
+
+IPAddress ipServer(10, 233, 146, 25); /** \brief The IP-adress of the server we want to communicate with */
+IPAddress ipClient(10, 233, 146, 227); /** \brief Our own IP-adress */
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 };/** \brief The MAC adress of our device */
+EthernetClient client; /** \brief Used to connect to a webserver */
+
+const int btnPin = 2; /** \brief Button pin */
+const int ledRed = 3; /** \brief led pin */
+
+String sMessage = ""; /** \brief Holds the message before it's being sent */
+String tempCapture = ""; /** \brief Button pin */
+
+long timeFirstPress = 0; /** \brief Used to record when button is first pressed*/
+long timeLastPress = 0; /** \brief Used to record when the button was last pressed*/
+long timeLastInsert = 0; /** \brief Used to record when we last inserted a char into our sMessage*/
+long timeDif = 0; /** \brief Calculates difference between first and last press*/
+
+const long timeMaxPush = 150; /** \brief Threshold in ms between '.' and '-'*/
+const long timeFailSafe = 20; /** \brief if 2 button presses within 20ms ignore so we don't get double inputs*/
+const long timeMaxWaitBeforeConvert = 500; /** \brief End of Morse threshold*/
+
+int buttonState = 0; /** \brief Gets the current state of the button*/
+int buttonLastState = 0; /** \brief Gets the last state of the button */
+int buttonReadySend = 0; /** \brief Used to check if we're ready to send the message*/
+
 String letters[SIZE]={
 // A to I
 ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
@@ -65,8 +44,8 @@ String letters[SIZE]={
 ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",
 // S to Z
 "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." 
-};
-int characterAscii = 0;
+}; /** \brief Alphabet array for the morse code*/
+int characterAscii = 0; /** \brief use to find char*/
 
 
 /**
@@ -128,16 +107,33 @@ void loop() {
             tempCapture += ".";
             
             //Serial.println(".");
-            msgInProgress = 1;
+            
+            buttonReadySend = 0;
             
           }
-          else
+          else if (timeDif < timeMaxWaitBeforeConvert)
           {
             tempCapture += "-";
             
             //Serial.println("-");
-            msgInProgress = 1;
+            
+            buttonReadySend = 0;
           }
+          else if (timeDif > timeMaxWaitBeforeConvert)
+          {
+            if (buttonReadySend == 1)
+            {
+              SendMessage(sMessage);
+              buttonReadySend = 0;
+            }
+            else
+            {
+              ConvertTempToMessage();
+              buttonReadySend++;
+            }
+
+          }
+
 
 
 
@@ -149,14 +145,15 @@ void loop() {
         }
   
       } // If enough time has passed - start converting the morse signal to a CHAR
-      else if ((tempCapture != "") && ((timeLastInsert + timeMaxWaitBeforeConvert) < millis()))
-      {
-        ConvertTempToMessage();
-      } // Send message
-      else if ((sMessage != "") && ((timeLastInsert + timeMaxWaitBeforeSend) < millis()))
-      {
-        SendMessage(sMessage);
-      }
+//      else if ((tempCapture != "") && ((timeLastInsert + timeMaxWaitBeforeConvert) < millis()))
+//      {
+//        ConvertTempToMessage();
+//      } // Send message
+//      else if ((sMessage != "") && ((timeLastInsert + timeMaxWaitBeforeSend) < millis()))
+//      {
+//        Serial.println("Test");
+//        SendMessage(sMessage);
+//      }
   
       // Reset state so we the loop can function properly
       timeFirstPress = 0;
@@ -177,6 +174,7 @@ void ConvertTempToMessage()
   tempCapture = "";
   Serial.println("Captured morse converted to message");
 }
+
 /** 
  * Function to send the message. It connects to a web server and sends the content of the sMessage string.
  * Once sent, it turns the LED on so that the user can see that it's sent if not looking at the terminal. 
@@ -185,19 +183,27 @@ void ConvertTempToMessage()
  */
 void SendMessage(String content)
 {
+  
   Serial.print("About to send");
   Serial.println();
-    if (client.connect(ipServer, 80)) {
-    Serial.print("connected to Server");
+    if (client.connect(ipServer, 5000)) {
+    
+    //char payload[50];
+    //content.toCharArray(payload, 50);
+    //Serial.print(payload);
+    Serial.println("connected to Server");
     Serial.println("Sending following to server: " + content);
+    //Serial.println(payload);
+
     // Make a HTTP request:
-    client.println("POST / HTTP/1.1");
-    client.println("Host: 192.168.0.124:80");
-    client.println("Accept: */*");
-    client.println("Content-Length: " + content.length());
-    client.println("Content-Type: application/x-www-form-urlencoded");
+    client.println("POST /?message=" + content + " HTTP/1.1");
+    Serial.println("POST /?message=" + content + " HTTP/1.1");
+    client.println("host: 10.233.146.25:5000");
+    client.println("user-agent: arduino/morse");
+    client.println("accept: */*");
+    client.println("content-length: " + content.length());
+    client.println("content-type: application/x-www-form-urlencoded");
     client.println();
-    client.println(content);
     client.stop();
 
   } else {

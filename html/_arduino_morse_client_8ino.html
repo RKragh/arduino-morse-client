@@ -81,111 +81,200 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a70ed59adcb4159ac551058053e649640"><td class="memItemLeft" align="right" valign="top"><a id="a70ed59adcb4159ac551058053e649640"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE</b>&#160;&#160;&#160;26</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a70ed59adcb4159ac551058053e649640">SIZE</a>&#160;&#160;&#160;26</td></tr>
+<tr class="memdesc:a70ed59adcb4159ac551058053e649640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of morse array as well as for loop in MorseConverter function. <br /></td></tr>
 <tr class="separator:a70ed59adcb4159ac551058053e649640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a07256a54d278c1b986c082cfc982d649"><td class="memItemLeft" align="right" valign="top"><a id="a07256a54d278c1b986c082cfc982d649"></a>
-IPAddress&#160;</td><td class="memItemRight" valign="bottom"><b>ipServer</b> (192, 168, 0, 124)</td></tr>
-<tr class="separator:a07256a54d278c1b986c082cfc982d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8cdd0de4ed028d6561c489a51c03e9d"><td class="memItemLeft" align="right" valign="top"><a id="aa8cdd0de4ed028d6561c489a51c03e9d"></a>
-IPAddress&#160;</td><td class="memItemRight" valign="bottom"><b>ipClient</b> (192, 168, 0, 227)</td></tr>
-<tr class="separator:aa8cdd0de4ed028d6561c489a51c03e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top"><a id="a4fc01d736fe50cf5b977f755b675f11d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="memitem:a003cf3759c7112d1d239a549ed433104"><td class="memItemLeft" align="right" valign="top"><a id="a003cf3759c7112d1d239a549ed433104"></a>
+IPAddress&#160;</td><td class="memItemRight" valign="bottom"><b>ipServer</b> (10, 233, 146, 25)</td></tr>
+<tr class="separator:a003cf3759c7112d1d239a549ed433104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ef01eb8f7bbc92bc655ddf6f2095b8"><td class="memItemLeft" align="right" valign="top"><a id="ab6ef01eb8f7bbc92bc655ddf6f2095b8"></a>
+IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#ab6ef01eb8f7bbc92bc655ddf6f2095b8">ipClient</a> (10, 233, 146, 227)</td></tr>
+<tr class="memdesc:ab6ef01eb8f7bbc92bc655ddf6f2095b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IP-adress of the server we want to communicate with. <br /></td></tr>
+<tr class="separator:ab6ef01eb8f7bbc92bc655ddf6f2095b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">use to find char  <a href="#a4fc01d736fe50cf5b977f755b675f11d">More...</a><br /></td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top"><a id="afe461d27b9c48d5921c00d521181f12f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>loop</b> ()</td></tr>
 <tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe60c5a5dee3af1ed1e0cf380175333"><td class="memItemLeft" align="right" valign="top"><a id="a1fe60c5a5dee3af1ed1e0cf380175333"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertTempToMessage</b> ()</td></tr>
+<tr class="memitem:a1fe60c5a5dee3af1ed1e0cf380175333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a1fe60c5a5dee3af1ed1e0cf380175333">ConvertTempToMessage</a> ()</td></tr>
 <tr class="separator:a1fe60c5a5dee3af1ed1e0cf380175333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b40eed9d26071a1abd196858475cb7e"><td class="memItemLeft" align="right" valign="top"><a id="a4b40eed9d26071a1abd196858475cb7e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (String content)</td></tr>
+<tr class="memitem:a4b40eed9d26071a1abd196858475cb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a4b40eed9d26071a1abd196858475cb7e">SendMessage</a> (String content)</td></tr>
 <tr class="separator:a4b40eed9d26071a1abd196858475cb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c352a3078a48318473305aa369f8c5f"><td class="memItemLeft" align="right" valign="top"><a id="a3c352a3078a48318473305aa369f8c5f"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>MorseToChar</b> (String characterCode)</td></tr>
+<tr class="memitem:a3c352a3078a48318473305aa369f8c5f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a3c352a3078a48318473305aa369f8c5f">MorseToChar</a> (String characterCode)</td></tr>
 <tr class="separator:a3c352a3078a48318473305aa369f8c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa3b0f3cd09cf5f54f379b6cdd2d45cb2"><td class="memItemLeft" align="right" valign="top"><a id="aa3b0f3cd09cf5f54f379b6cdd2d45cb2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>testEnvActive</b> = true</td></tr>
-<tr class="separator:aa3b0f3cd09cf5f54f379b6cdd2d45cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea3f7775fecafb66a619eb2dcb0357bd"><td class="memItemLeft" align="right" valign="top"><a id="aea3f7775fecafb66a619eb2dcb0357bd"></a>
-byte&#160;</td><td class="memItemRight" valign="bottom"><b>mac</b> [] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 }</td></tr>
+byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#aea3f7775fecafb66a619eb2dcb0357bd">mac</a> [] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xF8 }</td></tr>
+<tr class="memdesc:aea3f7775fecafb66a619eb2dcb0357bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our own IP-adress. <br /></td></tr>
 <tr class="separator:aea3f7775fecafb66a619eb2dcb0357bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a058da3453d064890d1eb0a5e2f730807"><td class="memItemLeft" align="right" valign="top"><a id="a058da3453d064890d1eb0a5e2f730807"></a>
-EthernetClient&#160;</td><td class="memItemRight" valign="bottom"><b>client</b></td></tr>
+EthernetClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a058da3453d064890d1eb0a5e2f730807">client</a></td></tr>
+<tr class="memdesc:a058da3453d064890d1eb0a5e2f730807"><td class="mdescLeft">&#160;</td><td class="mdescRight">The MAC adress of our device. <br /></td></tr>
 <tr class="separator:a058da3453d064890d1eb0a5e2f730807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67fc04bcef82c18a95567e37e5695fc3"><td class="memItemLeft" align="right" valign="top"><a id="a67fc04bcef82c18a95567e37e5695fc3"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>btnPin</b> = 2</td></tr>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a67fc04bcef82c18a95567e37e5695fc3">btnPin</a> = 2</td></tr>
+<tr class="memdesc:a67fc04bcef82c18a95567e37e5695fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to connect to a webserver. <br /></td></tr>
 <tr class="separator:a67fc04bcef82c18a95567e37e5695fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdaa7e302e35cf528bfcf79a08bf44bf"><td class="memItemLeft" align="right" valign="top"><a id="abdaa7e302e35cf528bfcf79a08bf44bf"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>ledRed</b> = 3</td></tr>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#abdaa7e302e35cf528bfcf79a08bf44bf">ledRed</a> = 3</td></tr>
+<tr class="memdesc:abdaa7e302e35cf528bfcf79a08bf44bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button pin. <br /></td></tr>
 <tr class="separator:abdaa7e302e35cf528bfcf79a08bf44bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe180e4d895b454d4e4e405a6aa2fc8a"><td class="memItemLeft" align="right" valign="top"><a id="afe180e4d895b454d4e4e405a6aa2fc8a"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>msgArray</b> [255]</td></tr>
-<tr class="separator:afe180e4d895b454d4e4e405a6aa2fc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee8b00e42eef40449cac5cb3d4f50d4"><td class="memItemLeft" align="right" valign="top"><a id="a4ee8b00e42eef40449cac5cb3d4f50d4"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>tempCharArray</b> [128]</td></tr>
-<tr class="separator:a4ee8b00e42eef40449cac5cb3d4f50d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5549cda51b5cdfaa580b2afff4aa9614"><td class="memItemLeft" align="right" valign="top"><a id="a5549cda51b5cdfaa580b2afff4aa9614"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>sMessage</b> = &quot;&quot;</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a5549cda51b5cdfaa580b2afff4aa9614">sMessage</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:a5549cda51b5cdfaa580b2afff4aa9614"><td class="mdescLeft">&#160;</td><td class="mdescRight">led pin <br /></td></tr>
 <tr class="separator:a5549cda51b5cdfaa580b2afff4aa9614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca5036f31eb60b8260d078976e59149"><td class="memItemLeft" align="right" valign="top"><a id="a6ca5036f31eb60b8260d078976e59149"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>tempCapture</b></td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a6ca5036f31eb60b8260d078976e59149">tempCapture</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:a6ca5036f31eb60b8260d078976e59149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the message before it's being sent. <br /></td></tr>
 <tr class="separator:a6ca5036f31eb60b8260d078976e59149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeccd31cd54fd45f667e50c6152910e1"><td class="memItemLeft" align="right" valign="top"><a id="afeccd31cd54fd45f667e50c6152910e1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>currMorseArrIndex</b> = 0</td></tr>
-<tr class="separator:afeccd31cd54fd45f667e50c6152910e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e44f00a53694df6ce78b11d02239605"><td class="memItemLeft" align="right" valign="top"><a id="a0e44f00a53694df6ce78b11d02239605"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>currMsgArrayIndex</b> = 0</td></tr>
-<tr class="separator:a0e44f00a53694df6ce78b11d02239605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4519918721f91dae25e6eb085f60efd0"><td class="memItemLeft" align="right" valign="top"><a id="a4519918721f91dae25e6eb085f60efd0"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>timeFirstPress</b> = 0</td></tr>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a4519918721f91dae25e6eb085f60efd0">timeFirstPress</a> = 0</td></tr>
+<tr class="memdesc:a4519918721f91dae25e6eb085f60efd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button pin. <br /></td></tr>
 <tr class="separator:a4519918721f91dae25e6eb085f60efd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc9b0b1e5cf6d2a43ae395d5b92adfa"><td class="memItemLeft" align="right" valign="top"><a id="a0bc9b0b1e5cf6d2a43ae395d5b92adfa"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>timeLastPress</b> = 0</td></tr>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a0bc9b0b1e5cf6d2a43ae395d5b92adfa">timeLastPress</a> = 0</td></tr>
+<tr class="memdesc:a0bc9b0b1e5cf6d2a43ae395d5b92adfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to record when button is first pressed. <br /></td></tr>
 <tr class="separator:a0bc9b0b1e5cf6d2a43ae395d5b92adfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ab75efd2de57cd9e2931f5b101e55a5"><td class="memItemLeft" align="right" valign="top"><a id="a8ab75efd2de57cd9e2931f5b101e55a5"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>timeLastInsert</b> = 0</td></tr>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a8ab75efd2de57cd9e2931f5b101e55a5">timeLastInsert</a> = 0</td></tr>
+<tr class="memdesc:a8ab75efd2de57cd9e2931f5b101e55a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to record when the button was last pressed. <br /></td></tr>
 <tr class="separator:a8ab75efd2de57cd9e2931f5b101e55a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1aad3dc8933e1a80684c4524899cc0"><td class="memItemLeft" align="right" valign="top"><a id="a3c1aad3dc8933e1a80684c4524899cc0"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>timeDif</b> = 0</td></tr>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a3c1aad3dc8933e1a80684c4524899cc0">timeDif</a> = 0</td></tr>
+<tr class="memdesc:a3c1aad3dc8933e1a80684c4524899cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to record when we last inserted a char into our sMessage. <br /></td></tr>
 <tr class="separator:a3c1aad3dc8933e1a80684c4524899cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaa28d39a68ea298c4efea85b798aa7d"><td class="memItemLeft" align="right" valign="top"><a id="adaa28d39a68ea298c4efea85b798aa7d"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>timeMaxPush</b> = 150</td></tr>
+const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#adaa28d39a68ea298c4efea85b798aa7d">timeMaxPush</a> = 150</td></tr>
+<tr class="memdesc:adaa28d39a68ea298c4efea85b798aa7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates difference between first and last press. <br /></td></tr>
 <tr class="separator:adaa28d39a68ea298c4efea85b798aa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2c0943e6069c9e8606218651a40f4a"><td class="memItemLeft" align="right" valign="top"><a id="a5a2c0943e6069c9e8606218651a40f4a"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>timeFailSafe</b> = 20</td></tr>
+const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a5a2c0943e6069c9e8606218651a40f4a">timeFailSafe</a> = 20</td></tr>
+<tr class="memdesc:a5a2c0943e6069c9e8606218651a40f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threshold in ms between '.' and '-'. <br /></td></tr>
 <tr class="separator:a5a2c0943e6069c9e8606218651a40f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a611e71e8ab7240e999fa22364bb844f4"><td class="memItemLeft" align="right" valign="top"><a id="a611e71e8ab7240e999fa22364bb844f4"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>timeMaxWaitBeforeConvert</b> = 500</td></tr>
+const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a611e71e8ab7240e999fa22364bb844f4">timeMaxWaitBeforeConvert</a> = 500</td></tr>
+<tr class="memdesc:a611e71e8ab7240e999fa22364bb844f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">if 2 button presses within 20ms ignore so we don't get double inputs <br /></td></tr>
 <tr class="separator:a611e71e8ab7240e999fa22364bb844f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dbf8f67f57d2d1832d79d062794ee47"><td class="memItemLeft" align="right" valign="top"><a id="a3dbf8f67f57d2d1832d79d062794ee47"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>timeMaxWaitBeforeSend</b> = 2000</td></tr>
-<tr class="separator:a3dbf8f67f57d2d1832d79d062794ee47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5002611f83f5a861df12917dd5651db8"><td class="memItemLeft" align="right" valign="top"><a id="a5002611f83f5a861df12917dd5651db8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>buttonState</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a5002611f83f5a861df12917dd5651db8">buttonState</a> = 0</td></tr>
+<tr class="memdesc:a5002611f83f5a861df12917dd5651db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of Morse threshold. <br /></td></tr>
 <tr class="separator:a5002611f83f5a861df12917dd5651db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a986feb0ed834c2e1498a4158aad806c4"><td class="memItemLeft" align="right" valign="top"><a id="a986feb0ed834c2e1498a4158aad806c4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>buttonLastState</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a986feb0ed834c2e1498a4158aad806c4">buttonLastState</a> = 0</td></tr>
+<tr class="memdesc:a986feb0ed834c2e1498a4158aad806c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current state of the button. <br /></td></tr>
 <tr class="separator:a986feb0ed834c2e1498a4158aad806c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a06b7eb603422f068b663ff2790a15"><td class="memItemLeft" align="right" valign="top"><a id="a08a06b7eb603422f068b663ff2790a15"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>msgInProgress</b> = 0</td></tr>
-<tr class="separator:a08a06b7eb603422f068b663ff2790a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7049c41d427471a21afc889cee0f7df9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><b>letters</b> [SIZE]</td></tr>
+<tr class="memitem:a344481de02db7e9fd3b2ed53e1380522"><td class="memItemLeft" align="right" valign="top"><a id="a344481de02db7e9fd3b2ed53e1380522"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a344481de02db7e9fd3b2ed53e1380522">buttonReadySend</a> = 0</td></tr>
+<tr class="memdesc:a344481de02db7e9fd3b2ed53e1380522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last state of the button. <br /></td></tr>
+<tr class="separator:a344481de02db7e9fd3b2ed53e1380522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7049c41d427471a21afc889cee0f7df9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a7049c41d427471a21afc889cee0f7df9">letters</a> [<a class="el" href="_arduino_morse_client_8ino.html#a70ed59adcb4159ac551058053e649640">SIZE</a>]</td></tr>
+<tr class="memdesc:a7049c41d427471a21afc889cee0f7df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check if we're ready to send the message.  <a href="#a7049c41d427471a21afc889cee0f7df9">More...</a><br /></td></tr>
 <tr class="separator:a7049c41d427471a21afc889cee0f7df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e7f5e19b853b70909233317cae7103"><td class="memItemLeft" align="right" valign="top"><a id="a35e7f5e19b853b70909233317cae7103"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>characterAscii</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_arduino_morse_client_8ino.html#a35e7f5e19b853b70909233317cae7103">characterAscii</a> = 0</td></tr>
+<tr class="memdesc:a35e7f5e19b853b70909233317cae7103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alphabet array for the morse code. <br /></td></tr>
 <tr class="separator:a35e7f5e19b853b70909233317cae7103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sketch that use a button to send morse code</p>
-<p>Made by Rasmus Kragh and Philip Dein </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
+<dl class="section version"><dt>Version</dt><dd>1st Of March 2019 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rasmus Kragh and Philip Dein </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1fe60c5a5dee3af1ed1e0cf380175333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe60c5a5dee3af1ed1e0cf380175333">&#9670;&nbsp;</a></span>ConvertTempToMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConvertTempToMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that takes the current series of morse inputs and converts them to the char. It uses the array of strings initalized before void start(). For debugging purposes it prints that it has finished converting. </p>
+
+</div>
+</div>
+<a id="a3c352a3078a48318473305aa369f8c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c352a3078a48318473305aa369f8c5f">&#9670;&nbsp;</a></span>MorseToChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char MorseToChar </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>characterCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The converter function used in ConvertTempToMessage</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">String</td><td>characterCode The morse inputs. It will be found in the array and the index + characterAscii equals Capital letter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b40eed9d26071a1abd196858475cb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b40eed9d26071a1abd196858475cb7e">&#9670;&nbsp;</a></span>SendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SendMessage </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function to send the message. It connects to a web server and sends the content of the sMessage string. Once sent, it turns the LED on so that the user can see that it's sent if not looking at the terminal.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">String</td><td>content the content store in sMessage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&nbsp;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use to find char </p>
+<p>Standard function that runs on startup. We initialize the Serial port to be able to see terminal We also start the Ethernet class so that we can communicate on the network We set button to register button releases. Set a timer on timeLastInsert, this is to prevent weird happenings. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="a7049c41d427471a21afc889cee0f7df9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7049c41d427471a21afc889cee0f7df9">&#9670;&nbsp;</a></span>letters</h2>
 
@@ -193,11 +282,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>characterAscii</b> = 0
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String letters[SIZE]</td>
+          <td class="memname">String letters[<a class="el" href="_arduino_morse_client_8ino.html#a70ed59adcb4159ac551058053e649640">SIZE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line"></div><div class="line"></div><div class="line"><span class="stringliteral">&quot;.-&quot;</span>, <span class="stringliteral">&quot;-...&quot;</span>, <span class="stringliteral">&quot;-.-.&quot;</span>, <span class="stringliteral">&quot;-..&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;..-.&quot;</span>, <span class="stringliteral">&quot;--.&quot;</span>, <span class="stringliteral">&quot;....&quot;</span>, <span class="stringliteral">&quot;..&quot;</span>,</div><div class="line"></div><div class="line"><span class="stringliteral">&quot;.---&quot;</span>, <span class="stringliteral">&quot;-.-&quot;</span>, <span class="stringliteral">&quot;.-..&quot;</span>, <span class="stringliteral">&quot;--&quot;</span>, <span class="stringliteral">&quot;-.&quot;</span>, <span class="stringliteral">&quot;---&quot;</span>, <span class="stringliteral">&quot;.--.&quot;</span>, <span class="stringliteral">&quot;--.-&quot;</span>, <span class="stringliteral">&quot;.-.&quot;</span>,</div><div class="line"></div><div class="line"><span class="stringliteral">&quot;...&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;..-&quot;</span>, <span class="stringliteral">&quot;...-&quot;</span>, <span class="stringliteral">&quot;.--&quot;</span>, <span class="stringliteral">&quot;-..-&quot;</span>, <span class="stringliteral">&quot;-.--&quot;</span>, <span class="stringliteral">&quot;--..&quot;</span> </div><div class="line">}</div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line"></div><div class="line"><span class="stringliteral">&quot;.-&quot;</span>, <span class="stringliteral">&quot;-...&quot;</span>, <span class="stringliteral">&quot;-.-.&quot;</span>, <span class="stringliteral">&quot;-..&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;..-.&quot;</span>, <span class="stringliteral">&quot;--.&quot;</span>, <span class="stringliteral">&quot;....&quot;</span>, <span class="stringliteral">&quot;..&quot;</span>,</div><div class="line"></div><div class="line"><span class="stringliteral">&quot;.---&quot;</span>, <span class="stringliteral">&quot;-.-&quot;</span>, <span class="stringliteral">&quot;.-..&quot;</span>, <span class="stringliteral">&quot;--&quot;</span>, <span class="stringliteral">&quot;-.&quot;</span>, <span class="stringliteral">&quot;---&quot;</span>, <span class="stringliteral">&quot;.--.&quot;</span>, <span class="stringliteral">&quot;--.-&quot;</span>, <span class="stringliteral">&quot;.-.&quot;</span>,</div><div class="line"></div><div class="line"><span class="stringliteral">&quot;...&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;..-&quot;</span>, <span class="stringliteral">&quot;...-&quot;</span>, <span class="stringliteral">&quot;.--&quot;</span>, <span class="stringliteral">&quot;-..-&quot;</span>, <span class="stringliteral">&quot;-.--&quot;</span>, <span class="stringliteral">&quot;--..&quot;</span> </div><div class="line">}</div></div><!-- fragment -->
+<p>Used to check if we're ready to send the message. </p>
+
 </div>
 </div>
 </div><!-- contents -->

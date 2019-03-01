@@ -7,124 +7,152 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a70ed59adcb4159ac551058053e649640}\label{_arduino_morse_client_8ino_a70ed59adcb4159ac551058053e649640}} 
-\#define {\bfseries S\+I\+ZE}~26
-\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{_arduino_morse_client_8ino_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}~26
+\begin{DoxyCompactList}\small\item\em Size of morse array as well as for loop in Morse\+Converter function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a07256a54d278c1b986c082cfc982d649}\label{_arduino_morse_client_8ino_a07256a54d278c1b986c082cfc982d649}} 
-I\+P\+Address {\bfseries ip\+Server} (192, 168, 0, 124)
+\mbox{\Hypertarget{_arduino_morse_client_8ino_a003cf3759c7112d1d239a549ed433104}\label{_arduino_morse_client_8ino_a003cf3759c7112d1d239a549ed433104}} 
+I\+P\+Address {\bfseries ip\+Server} (10, 233, 146, 25)
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_aa8cdd0de4ed028d6561c489a51c03e9d}\label{_arduino_morse_client_8ino_aa8cdd0de4ed028d6561c489a51c03e9d}} 
-I\+P\+Address {\bfseries ip\+Client} (192, 168, 0, 227)
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_arduino_morse_client_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
-void {\bfseries setup} ()
-\item 
+\mbox{\Hypertarget{_arduino_morse_client_8ino_ab6ef01eb8f7bbc92bc655ddf6f2095b8}\label{_arduino_morse_client_8ino_ab6ef01eb8f7bbc92bc655ddf6f2095b8}} 
+I\+P\+Address \mbox{\hyperlink{_arduino_morse_client_8ino_ab6ef01eb8f7bbc92bc655ddf6f2095b8}{ip\+Client}} (10, 233, 146, 227)
+\begin{DoxyCompactList}\small\item\em The I\+P-\/adress of the server we want to communicate with. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_arduino_morse_client_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em use to find char \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_afe461d27b9c48d5921c00d521181f12f}\label{_arduino_morse_client_8ino_afe461d27b9c48d5921c00d521181f12f}} 
 void {\bfseries loop} ()
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a1fe60c5a5dee3af1ed1e0cf380175333}\label{_arduino_morse_client_8ino_a1fe60c5a5dee3af1ed1e0cf380175333}} 
-void {\bfseries Convert\+Temp\+To\+Message} ()
+void \mbox{\hyperlink{_arduino_morse_client_8ino_a1fe60c5a5dee3af1ed1e0cf380175333}{Convert\+Temp\+To\+Message}} ()
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a4b40eed9d26071a1abd196858475cb7e}\label{_arduino_morse_client_8ino_a4b40eed9d26071a1abd196858475cb7e}} 
-void {\bfseries Send\+Message} (String content)
+void \mbox{\hyperlink{_arduino_morse_client_8ino_a4b40eed9d26071a1abd196858475cb7e}{Send\+Message}} (String content)
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a3c352a3078a48318473305aa369f8c5f}\label{_arduino_morse_client_8ino_a3c352a3078a48318473305aa369f8c5f}} 
-char {\bfseries Morse\+To\+Char} (String character\+Code)
+char \mbox{\hyperlink{_arduino_morse_client_8ino_a3c352a3078a48318473305aa369f8c5f}{Morse\+To\+Char}} (String character\+Code)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_aa3b0f3cd09cf5f54f379b6cdd2d45cb2}\label{_arduino_morse_client_8ino_aa3b0f3cd09cf5f54f379b6cdd2d45cb2}} 
-bool {\bfseries test\+Env\+Active} = true
-\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_aea3f7775fecafb66a619eb2dcb0357bd}\label{_arduino_morse_client_8ino_aea3f7775fecafb66a619eb2dcb0357bd}} 
-byte {\bfseries mac} \mbox{[}$\,$\mbox{]} = \{ 0x\+D\+E, 0x\+A\+D, 0x\+B\+E, 0x\+E\+F, 0x\+F\+E, 0x\+F8 \}
-\item 
+byte \mbox{\hyperlink{_arduino_morse_client_8ino_aea3f7775fecafb66a619eb2dcb0357bd}{mac}} \mbox{[}$\,$\mbox{]} = \{ 0x\+D\+E, 0x\+A\+D, 0x\+B\+E, 0x\+E\+F, 0x\+F\+E, 0x\+F8 \}
+\begin{DoxyCompactList}\small\item\em Our own I\+P-\/adress. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a058da3453d064890d1eb0a5e2f730807}\label{_arduino_morse_client_8ino_a058da3453d064890d1eb0a5e2f730807}} 
-Ethernet\+Client {\bfseries client}
-\item 
+Ethernet\+Client \mbox{\hyperlink{_arduino_morse_client_8ino_a058da3453d064890d1eb0a5e2f730807}{client}}
+\begin{DoxyCompactList}\small\item\em The M\+AC adress of our device. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a67fc04bcef82c18a95567e37e5695fc3}\label{_arduino_morse_client_8ino_a67fc04bcef82c18a95567e37e5695fc3}} 
-const int {\bfseries btn\+Pin} = 2
-\item 
+const int \mbox{\hyperlink{_arduino_morse_client_8ino_a67fc04bcef82c18a95567e37e5695fc3}{btn\+Pin}} = 2
+\begin{DoxyCompactList}\small\item\em Used to connect to a webserver. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_abdaa7e302e35cf528bfcf79a08bf44bf}\label{_arduino_morse_client_8ino_abdaa7e302e35cf528bfcf79a08bf44bf}} 
-const int {\bfseries led\+Red} = 3
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_afe180e4d895b454d4e4e405a6aa2fc8a}\label{_arduino_morse_client_8ino_afe180e4d895b454d4e4e405a6aa2fc8a}} 
-char {\bfseries msg\+Array} \mbox{[}255\mbox{]}
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a4ee8b00e42eef40449cac5cb3d4f50d4}\label{_arduino_morse_client_8ino_a4ee8b00e42eef40449cac5cb3d4f50d4}} 
-char {\bfseries temp\+Char\+Array} \mbox{[}128\mbox{]}
-\item 
+const int \mbox{\hyperlink{_arduino_morse_client_8ino_abdaa7e302e35cf528bfcf79a08bf44bf}{led\+Red}} = 3
+\begin{DoxyCompactList}\small\item\em Button pin. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a5549cda51b5cdfaa580b2afff4aa9614}\label{_arduino_morse_client_8ino_a5549cda51b5cdfaa580b2afff4aa9614}} 
-String {\bfseries s\+Message} = \char`\"{}\char`\"{}
-\item 
+String \mbox{\hyperlink{_arduino_morse_client_8ino_a5549cda51b5cdfaa580b2afff4aa9614}{s\+Message}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em led pin \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a6ca5036f31eb60b8260d078976e59149}\label{_arduino_morse_client_8ino_a6ca5036f31eb60b8260d078976e59149}} 
-String {\bfseries temp\+Capture}
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_afeccd31cd54fd45f667e50c6152910e1}\label{_arduino_morse_client_8ino_afeccd31cd54fd45f667e50c6152910e1}} 
-int {\bfseries curr\+Morse\+Arr\+Index} = 0
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a0e44f00a53694df6ce78b11d02239605}\label{_arduino_morse_client_8ino_a0e44f00a53694df6ce78b11d02239605}} 
-int {\bfseries curr\+Msg\+Array\+Index} = 0
-\item 
+String \mbox{\hyperlink{_arduino_morse_client_8ino_a6ca5036f31eb60b8260d078976e59149}{temp\+Capture}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Holds the message before it\textquotesingle{}s being sent. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a4519918721f91dae25e6eb085f60efd0}\label{_arduino_morse_client_8ino_a4519918721f91dae25e6eb085f60efd0}} 
-long {\bfseries time\+First\+Press} = 0
-\item 
+long \mbox{\hyperlink{_arduino_morse_client_8ino_a4519918721f91dae25e6eb085f60efd0}{time\+First\+Press}} = 0
+\begin{DoxyCompactList}\small\item\em Button pin. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a0bc9b0b1e5cf6d2a43ae395d5b92adfa}\label{_arduino_morse_client_8ino_a0bc9b0b1e5cf6d2a43ae395d5b92adfa}} 
-long {\bfseries time\+Last\+Press} = 0
-\item 
+long \mbox{\hyperlink{_arduino_morse_client_8ino_a0bc9b0b1e5cf6d2a43ae395d5b92adfa}{time\+Last\+Press}} = 0
+\begin{DoxyCompactList}\small\item\em Used to record when button is first pressed. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a8ab75efd2de57cd9e2931f5b101e55a5}\label{_arduino_morse_client_8ino_a8ab75efd2de57cd9e2931f5b101e55a5}} 
-long {\bfseries time\+Last\+Insert} = 0
-\item 
+long \mbox{\hyperlink{_arduino_morse_client_8ino_a8ab75efd2de57cd9e2931f5b101e55a5}{time\+Last\+Insert}} = 0
+\begin{DoxyCompactList}\small\item\em Used to record when the button was last pressed. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a3c1aad3dc8933e1a80684c4524899cc0}\label{_arduino_morse_client_8ino_a3c1aad3dc8933e1a80684c4524899cc0}} 
-long {\bfseries time\+Dif} = 0
-\item 
+long \mbox{\hyperlink{_arduino_morse_client_8ino_a3c1aad3dc8933e1a80684c4524899cc0}{time\+Dif}} = 0
+\begin{DoxyCompactList}\small\item\em Used to record when we last inserted a char into our s\+Message. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_adaa28d39a68ea298c4efea85b798aa7d}\label{_arduino_morse_client_8ino_adaa28d39a68ea298c4efea85b798aa7d}} 
-const long {\bfseries time\+Max\+Push} = 150
-\item 
+const long \mbox{\hyperlink{_arduino_morse_client_8ino_adaa28d39a68ea298c4efea85b798aa7d}{time\+Max\+Push}} = 150
+\begin{DoxyCompactList}\small\item\em Calculates difference between first and last press. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a5a2c0943e6069c9e8606218651a40f4a}\label{_arduino_morse_client_8ino_a5a2c0943e6069c9e8606218651a40f4a}} 
-const long {\bfseries time\+Fail\+Safe} = 20
-\item 
+const long \mbox{\hyperlink{_arduino_morse_client_8ino_a5a2c0943e6069c9e8606218651a40f4a}{time\+Fail\+Safe}} = 20
+\begin{DoxyCompactList}\small\item\em Threshold in ms between \textquotesingle{}.\textquotesingle{} and \textquotesingle{}-\/\textquotesingle{}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a611e71e8ab7240e999fa22364bb844f4}\label{_arduino_morse_client_8ino_a611e71e8ab7240e999fa22364bb844f4}} 
-const long {\bfseries time\+Max\+Wait\+Before\+Convert} = 500
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a3dbf8f67f57d2d1832d79d062794ee47}\label{_arduino_morse_client_8ino_a3dbf8f67f57d2d1832d79d062794ee47}} 
-const long {\bfseries time\+Max\+Wait\+Before\+Send} = 2000
-\item 
+const long \mbox{\hyperlink{_arduino_morse_client_8ino_a611e71e8ab7240e999fa22364bb844f4}{time\+Max\+Wait\+Before\+Convert}} = 500
+\begin{DoxyCompactList}\small\item\em if 2 button presses within 20ms ignore so we don\textquotesingle{}t get double inputs \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a5002611f83f5a861df12917dd5651db8}\label{_arduino_morse_client_8ino_a5002611f83f5a861df12917dd5651db8}} 
-int {\bfseries button\+State} = 0
-\item 
+int \mbox{\hyperlink{_arduino_morse_client_8ino_a5002611f83f5a861df12917dd5651db8}{button\+State}} = 0
+\begin{DoxyCompactList}\small\item\em End of Morse threshold. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a986feb0ed834c2e1498a4158aad806c4}\label{_arduino_morse_client_8ino_a986feb0ed834c2e1498a4158aad806c4}} 
-int {\bfseries button\+Last\+State} = 0
-\item 
-\mbox{\Hypertarget{_arduino_morse_client_8ino_a08a06b7eb603422f068b663ff2790a15}\label{_arduino_morse_client_8ino_a08a06b7eb603422f068b663ff2790a15}} 
-int {\bfseries msg\+In\+Progress} = 0
-\item 
-String {\bfseries letters} \mbox{[}S\+I\+ZE\mbox{]}
-\item 
+int \mbox{\hyperlink{_arduino_morse_client_8ino_a986feb0ed834c2e1498a4158aad806c4}{button\+Last\+State}} = 0
+\begin{DoxyCompactList}\small\item\em Gets the current state of the button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_arduino_morse_client_8ino_a344481de02db7e9fd3b2ed53e1380522}\label{_arduino_morse_client_8ino_a344481de02db7e9fd3b2ed53e1380522}} 
+int \mbox{\hyperlink{_arduino_morse_client_8ino_a344481de02db7e9fd3b2ed53e1380522}{button\+Ready\+Send}} = 0
+\begin{DoxyCompactList}\small\item\em Gets the last state of the button. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{_arduino_morse_client_8ino_a7049c41d427471a21afc889cee0f7df9}{letters}} \mbox{[}\mbox{\hyperlink{_arduino_morse_client_8ino_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Used to check if we\textquotesingle{}re ready to send the message. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a35e7f5e19b853b70909233317cae7103}\label{_arduino_morse_client_8ino_a35e7f5e19b853b70909233317cae7103}} 
-int {\bfseries character\+Ascii} = 0
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{_arduino_morse_client_8ino_a35e7f5e19b853b70909233317cae7103}{character\+Ascii}} = 0
+\begin{DoxyCompactList}\small\item\em Alphabet array for the morse code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Sketch that use a button to send morse code
 
-Made by Rasmus Kragh and Philip Dein 
+\begin{DoxyVersion}{Version}
+1st Of March 2019 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Rasmus Kragh and Philip Dein 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_arduino_morse_client_8ino_a1fe60c5a5dee3af1ed1e0cf380175333}\label{_arduino_morse_client_8ino_a1fe60c5a5dee3af1ed1e0cf380175333}} 
+\index{ArduinoMorseClient.ino@{ArduinoMorseClient.ino}!ConvertTempToMessage@{ConvertTempToMessage}}
+\index{ConvertTempToMessage@{ConvertTempToMessage}!ArduinoMorseClient.ino@{ArduinoMorseClient.ino}}
+\subsubsection{\texorpdfstring{ConvertTempToMessage()}{ConvertTempToMessage()}}
+{\footnotesize\ttfamily void Convert\+Temp\+To\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that takes the current series of morse inputs and converts them to the char. It uses the array of strings initalized before void start(). For debugging purposes it prints that it has finished converting. \mbox{\Hypertarget{_arduino_morse_client_8ino_a3c352a3078a48318473305aa369f8c5f}\label{_arduino_morse_client_8ino_a3c352a3078a48318473305aa369f8c5f}} 
+\index{ArduinoMorseClient.ino@{ArduinoMorseClient.ino}!MorseToChar@{MorseToChar}}
+\index{MorseToChar@{MorseToChar}!ArduinoMorseClient.ino@{ArduinoMorseClient.ino}}
+\subsubsection{\texorpdfstring{MorseToChar()}{MorseToChar()}}
+{\footnotesize\ttfamily char Morse\+To\+Char (\begin{DoxyParamCaption}\item[{String}]{character\+Code }\end{DoxyParamCaption})}
+
+The converter function used in Convert\+Temp\+To\+Message
+
+
+\begin{DoxyParams}{Parameters}
+{\em String} & character\+Code The morse inputs. It will be found in the array and the index + character\+Ascii equals Capital letter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_arduino_morse_client_8ino_a4b40eed9d26071a1abd196858475cb7e}\label{_arduino_morse_client_8ino_a4b40eed9d26071a1abd196858475cb7e}} 
+\index{ArduinoMorseClient.ino@{ArduinoMorseClient.ino}!SendMessage@{SendMessage}}
+\index{SendMessage@{SendMessage}!ArduinoMorseClient.ino@{ArduinoMorseClient.ino}}
+\subsubsection{\texorpdfstring{SendMessage()}{SendMessage()}}
+{\footnotesize\ttfamily void Send\+Message (\begin{DoxyParamCaption}\item[{String}]{content }\end{DoxyParamCaption})}
+
+Function to send the message. It connects to a web server and sends the content of the s\+Message string. Once sent, it turns the L\+ED on so that the user can see that it\textquotesingle{}s sent if not looking at the terminal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em String} & content the content store in s\+Message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_arduino_morse_client_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{_arduino_morse_client_8ino_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{ArduinoMorseClient.ino@{ArduinoMorseClient.ino}!setup@{setup}}
+\index{setup@{setup}!ArduinoMorseClient.ino@{ArduinoMorseClient.ino}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+use to find char 
+
+Standard function that runs on startup. We initialize the Serial port to be able to see terminal We also start the Ethernet class so that we can communicate on the network We set button to register button releases. Set a timer on time\+Last\+Insert, this is to prevent weird happenings. 
 
 \subsection{Variable Documentation}
 \mbox{\Hypertarget{_arduino_morse_client_8ino_a7049c41d427471a21afc889cee0f7df9}\label{_arduino_morse_client_8ino_a7049c41d427471a21afc889cee0f7df9}} 
 \index{ArduinoMorseClient.ino@{ArduinoMorseClient.ino}!letters@{letters}}
 \index{letters@{letters}!ArduinoMorseClient.ino@{ArduinoMorseClient.ino}}
 \subsubsection{\texorpdfstring{letters}{letters}}
-{\footnotesize\ttfamily String letters\mbox{[}S\+I\+ZE\mbox{]}}
+{\footnotesize\ttfamily String letters\mbox{[}\mbox{\hyperlink{_arduino_morse_client_8ino_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}}\mbox{]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\{}
-\DoxyCodeLine{}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{stringliteral}{".-"}, \textcolor{stringliteral}{"-..."}, \textcolor{stringliteral}{"-.-."}, \textcolor{stringliteral}{"-.."}, \textcolor{stringliteral}{"."}, \textcolor{stringliteral}{"..-."}, \textcolor{stringliteral}{"--."}, \textcolor{stringliteral}{"...."}, \textcolor{stringliteral}{".."},}
 \DoxyCodeLine{}
@@ -134,3 +162,7 @@ Made by Rasmus Kragh and Philip Dein
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
+
+
+Used to check if we\textquotesingle{}re ready to send the message. 
+
