@@ -60,17 +60,18 @@ The webserver will then have to grab this packet and extract the query for it to
 
 The Arduino will display through the serial port the morse signals that it will use depending on how long you press the button, as well as messages about converting or sending.
 It will display either of the following things:
-```.
+```
+.
 -
 Captured morse converted to message
 
-**If it can connect to the server:**
+[If it can connect to the server:]
 About to send
 connected to Server
 Sending following to server: [[Captured and converted morse]]
 POST /?message=E HTTP/1.1
 
-**If it can not connect to the server**
+[If it can not connect to the server]
 About to send
 "connection failed"
 ```
